@@ -1,10 +1,13 @@
+//declarando as variáveis
 const texto = document.querySelector('input')
 const btnInsert = document.querySelector('.divInsert button')
 const btnDeleteAll = document.querySelector('.header button')
 const ul = document.querySelector('ul')
 
+//variavel global para iterar com o banco
 var itensDB = []
 
+//eventos 
 btnDeleteAll.onclick = () => {
   itensDB = []
   updateDB()
@@ -22,6 +25,7 @@ btnInsert.onclick = () => {
   }
 }
 
+// verificar se tem mais de 20 itens na tela
 function setItemDB() {
   if (itensDB.length >= 20) {
     alert('Limite máximo de 20 itens atingido!')
@@ -31,12 +35,12 @@ function setItemDB() {
   itensDB.push({ 'item': texto.value, 'status': '' })
   updateDB()
 }
-
+//colocar o iten do banco
 function updateDB() {
   localStorage.setItem('todolist', JSON.stringify(itensDB))
   loadItens()
 }
-
+//limpar para não duplicar itens na tela
 function loadItens() {
   ul.innerHTML = "";
   itensDB = JSON.parse(localStorage.getItem('todolist')) ?? []

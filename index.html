@@ -6,22 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lista de Tarefas</title>
   <link rel="stylesheet" href="style.css">
+  <!--icons-->
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-  <div class="to-do">
-    <div class="header">
-      <p>Lista de Tarefas</p>
-      <button><i class='bx bxs-trash-alt'></i></button>
+   
+    <div class="to-do">
+      <div class="header">
+        <p>Lista de Tarefas</p>
+        <button><i class='bx bxs-trash-alt'></i></button>
+      </div>
+      
+      <br />
+      <div class="divInsert">
+        <input class="textInsert" type="text" placeholder="Adicione uma nova tarefa..." />
+        <button><i class='bx bx-plus'></i></button>
+      </div>
+      <ul></ul>
     </div>
-    <hr/>
-    <br />
-    <div class="divInsert">
-      <input class="textInsert" type="text" placeholder="Adicione uma nova tarefa..." />
-      <button><i class='bx bx-plus'></i></button>
-    </div>
-    <ul></ul>
-  </div>
   
   <script src="index.js"></script>
 </body>
